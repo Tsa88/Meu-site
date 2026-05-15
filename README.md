@@ -6,11 +6,14 @@ Site completo de e-commerce para dropshipping com pagamento via PIX, painel admi
 
 ## 🚀 Como publicar no GitHub Pages
 
-1. Crie um repositório no GitHub (ex: `minha-loja`)
-2. Faça upload dos 3 arquivos: `index.html`, `style.css`, `app.js`
-3. Vá em **Settings → Pages → Source → main branch → / (root)**
-4. Aguarde ~2 minutos. Seu site estará em:
-   `https://seuusuario.github.io/minha-loja/`
+Este repositório já está pronto para deploy automático com GitHub Actions.
+
+1. Envie os arquivos para a branch `main` (ou `master`)
+2. No GitHub, vá em **Settings → Pages**
+3. Em **Source**, selecione **GitHub Actions**
+4. Aguarde a execução do workflow **Deploy site no GitHub Pages**
+5. Seu site ficará disponível em:
+   `https://seuusuario.github.io/nome-do-repositorio/`
 
 ---
 
