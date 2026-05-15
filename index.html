@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ShopDrop — Sua Loja Online</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header id="header">
+  <div class="header-inner">
+    <a href="#" class="logo" onclick="showPage('home')">
+      <span class="logo-icon">◈</span>
+      <span class="logo-text">ShopDrop</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#" onclick="showPage('home')">Início</a>
+      <a href="#produtos">Produtos</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <div class="header-actions">
+      <button class="cart-btn" onclick="toggleCart()">
+        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+        Carrinho
+        <span class="cart-badge" id="cartBadge">0</span>
+      </button>
+    </div>
+    <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#" onclick="showPage('home');toggleMobileMenu()">Início</a>
+    <a href="#produtos" onclick="toggleMobileMenu()">Produtos</a>
+    <a href="#sobre" onclick="toggleMobileMenu()">Sobre</a>
+    <a href="#contato" onclick="toggleMobileMenu()">Contato</a>
+  </div>
+</header>
+
+<!-- ===== HOME PAGE ===== -->
+<div id="page-home">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg">
+      <div class="hero-orb orb1"></div>
+      <div class="hero-orb orb2"></div>
+      <div class="hero-orb orb3"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge">✦ Entrega Rápida &amp; Garantida</div>
+      <h1 class="hero-title">Produtos<br/><span class="hero-accent">Incríveis</span><br/>Para Você</h1>
+      <p class="hero-sub">Descubra centenas de produtos selecionados com os melhores preços. Pagamento via PIX e entrega segura.</p>
+      <div class="hero-ctas">
+        <a href="#produtos" class="btn-primary">Ver Produtos</a>
+        <a href="#sobre" class="btn-ghost">Saiba Mais</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><strong>100+</strong><span>Produtos</span></div>
+        <div class="stat-div"></div>
+        <div class="stat"><strong>4h</strong><span>Envio Rápido</span></div>
+        <div class="stat-div"></div>
+        <div class="stat"><strong>PIX</strong><span>Pagamento</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BANNER DE VANTAGENS -->
+  <section class="benefits-bar">
+    <div class="benefit">
+      <span class="benefit-icon">⚡</span>
+      <div><strong>Envio em 4h</strong><p>Após confirmação do pagamento</p></div>
+    </div>
+    <div class="benefit">
+      <span class="benefit-icon">🔒</span>
+      <div><strong>Pagamento Seguro</strong><p>PIX instantâneo e seguro</p></div>
+    </div>
+    <div class="benefit">
+      <span class="benefit-icon">💎</span>
+      <div><strong>Qualidade Garantida</strong><p>Produtos selecionados</p></div>
+    </div>
+    <div class="benefit">
+      <span class="benefit-icon">📦</span>
+      <div><strong>Embalagem Segura</strong><p>Produtos bem protegidos</p></div>
+    </div>
+  </section>
+
+  <!-- PRODUTOS -->
+  <section class="products-section" id="produtos">
+    <div class="section-header">
+      <h2>Nossos <span class="accent">Produtos</span></h2>
+      <p>Explore nossa coleção completa de produtos</p>
+      <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Buscar produtos..." oninput="filterProducts()" />
+        <span class="search-icon">🔍</span>
+      </div>
+    </div>
+    <div class="products-grid" id="productsGrid">
+      <!-- Produtos injetados via JS -->
+    </div>
+    <div class="no-results" id="noResults" style="display:none">
+      <p>Nenhum produto encontrado. Tente outra busca.</p>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section class="about-section" id="sobre">
+    <div class="about-inner">
+      <div class="about-text">
+        <div class="section-tag">◈ Sobre Nós</div>
+        <h2>Por que escolher a <span class="accent">ShopDrop</span>?</h2>
+        <p>Somos uma loja dedicada a trazer os melhores produtos direto para você, com praticidade e segurança. Nosso processo de envio é rápido — assim que o pagamento é confirmado, seu pedido entra em processamento imediato.</p>
+        <ul class="about-list">
+          <li>✓ Produtos verificados e de qualidade</li>
+          <li>✓ Pagamento exclusivo via PIX — rápido e sem taxas</li>
+          <li>✓ Confirmação por e-mail automática</li>
+          <li>✓ Suporte dedicado ao cliente</li>
+        </ul>
+      </div>
+      <div class="about-visual">
+        <div class="about-card">
+          <div class="about-card-icon">📦</div>
+          <strong>Pedido Feito</strong>
+          <p>Você escolhe e paga via PIX</p>
+        </div>
+        <div class="about-arrow">→</div>
+        <div class="about-card">
+          <div class="about-card-icon">✅</div>
+          <strong>Confirmação</strong>
+          <p>E-mail enviado automaticamente</p>
+        </div>
+        <div class="about-arrow">→</div>
+        <div class="about-card">
+          <div class="about-card-icon">🚀</div>
+          <strong>Envio em 4h</strong>
+          <p>Produto a caminho</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section class="contact-section" id="contato">
+    <div class="contact-inner">
+      <h2>Fale <span class="accent">Conosco</span></h2>
+      <p>Dúvidas? Entre em contato pela nossa equipe de suporte.</p>
+      <div class="contact-cards">
+        <div class="contact-card">
+          <span>📧</span>
+          <strong>E-mail</strong>
+          <a href="mailto:suporte@shopdrop.com.br">suporte@shopdrop.com.br</a>
+        </div>
+        <div class="contact-card">
+          <span>💬</span>
+          <strong>WhatsApp</strong>
+          <a href="https://wa.me/5511999999999" target="_blank">(11) 99999-9999</a>
+        </div>
+        <div class="contact-card">
+          <span>🕐</span>
+          <strong>Horário</strong>
+          <span>Seg–Sex: 9h às 18h</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div><!-- /page-home -->
+
+<!-- ===== CHECKOUT PAGE ===== -->
+<div id="page-checkout" style="display:none">
+  <div class="checkout-wrapper">
+    <button class="back-btn" onclick="showPage('home')">← Voltar à Loja</button>
+    <div class="checkout-layout">
+      <!-- FORMULÁRIO -->
+      <div class="checkout-form-box">
+        <h2>Finalizar Pedido</h2>
+        <p class="checkout-sub">Preencha seus dados para concluir a compra</p>
+
+        <div class="form-group">
+          <label>Nome Completo *</label>
+          <input type="text" id="chkNome" placeholder="Seu nome completo" />
+        </div>
+        <div class="form-group">
+          <label>CPF *</label>
+          <input type="text" id="chkCpf" placeholder="000.000.000-00" maxlength="14" oninput="maskCPF(this)" />
+        </div>
+        <div class="form-group">
+          <label>E-mail *</label>
+          <input type="email" id="chkEmail" placeholder="seuemail@exemplo.com" />
+        </div>
+        <div class="form-group">
+          <label>CEP (opcional)</label>
+          <input type="text" id="chkCep" placeholder="00000-000" maxlength="9" oninput="maskCEP(this)" />
+        </div>
+
+        <!-- PAGAMENTO PIX -->
+        <div class="pix-box">
+          <div class="pix-header">
+            <div class="pix-logo">PIX</div>
+            <strong>Pagamento via PIX</strong>
+          </div>
+          <p>Após confirmar o pedido, você receberá a chave PIX para pagamento. O envio ocorrerá em até <strong>4 horas</strong> após a confirmação do pagamento.</p>
+          <div class="pix-key-display" id="pixKeyDisplay" style="display:none">
+            <p>Chave PIX:</p>
+            <div class="pix-key-value" id="pixKeyValue"></div>
+            <button class="copy-btn" onclick="copyPixKey()">📋 Copiar Chave</button>
+          </div>
+        </div>
+
+        <button class="confirm-btn" onclick="confirmOrder()">
+          Confirmar Pedido &amp; Ver PIX
+        </button>
+      </div>
+
+      <!-- RESUMO DO PEDIDO -->
+      <div class="checkout-summary">
+        <h3>Resumo do Pedido</h3>
+        <div id="checkoutItems"></div>
+        <div class="summary-totals">
+          <div class="summary-row"><span>Subtotal</span><span id="summarySubtotal">R$ 0,00</span></div>
+          <div class="summary-row"><span>Frete</span><span class="free-shipping">GRÁTIS</span></div>
+          <div class="summary-row total-row"><strong>Total</strong><strong id="summaryTotal">R$ 0,00</strong></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== CONFIRMAÇÃO ===== -->
+<div id="page-confirm" style="display:none">
+  <div class="confirm-wrapper">
+    <div class="confirm-card">
+      <div class="confirm-icon">✅</div>
+      <h2>Pedido Confirmado!</h2>
+      <p id="confirmMsg">Obrigado! Um e-mail de confirmação foi enviado para você.</p>
+      <div class="confirm-info">
+        <div class="confirm-row"><span>Pedido nº</span><strong id="confirmOrderId"></strong></div>
+        <div class="confirm-row"><span>Nome</span><strong id="confirmName"></strong></div>
+        <div class="confirm-row"><span>E-mail</span><strong id="confirmEmail"></strong></div>
+        <div class="confirm-row pix-row">
+          <span>Chave PIX</span>
+          <strong id="confirmPixKey"></strong>
+        </div>
+      </div>
+      <div class="confirm-notice">
+        <strong>📬 Próximos passos:</strong>
+        <ol>
+          <li>Realize o pagamento via PIX usando a chave acima</li>
+          <li>Enviaremos um e-mail confirmando o recebimento</li>
+          <li>Seu produto será enviado em até <strong>4 horas</strong> após a confirmação</li>
+        </ol>
+      </div>
+      <button class="btn-primary" onclick="showPage('home');clearCart()">Continuar Comprando</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== CARRINHO LATERAL ===== -->
+<div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+<div class="cart-drawer" id="cartDrawer">
+  <div class="cart-header">
+    <h3>🛒 Seu Carrinho</h3>
+    <button onclick="toggleCart()">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems">
+    <div class="cart-empty">Seu carrinho está vazio</div>
+  </div>
+  <div class="cart-footer" id="cartFooter" style="display:none">
+    <div class="cart-total">
+      <span>Total:</span>
+      <strong id="cartTotal">R$ 0,00</strong>
+    </div>
+    <button class="checkout-btn" onclick="goToCheckout()">Finalizar Compra</button>
+    <button class="clear-cart-btn" onclick="clearCart()">Limpar Carrinho</button>
+  </div>
+</div>
+
+<!-- ===== MODAL PRODUTO ===== -->
+<div class="modal-overlay" id="modalOverlay" onclick="closeModal()"></div>
+<div class="product-modal" id="productModal">
+  <button class="modal-close" onclick="closeModal()">✕</button>
+  <div class="modal-inner">
+    <div class="modal-img-wrap">
+      <img id="modalImg" src="" alt="" />
+    </div>
+    <div class="modal-info">
+      <h2 id="modalName"></h2>
+      <div class="modal-price" id="modalPrice"></div>
+      <p id="modalDesc" class="modal-desc"></p>
+      <div class="modal-actions">
+        <div class="qty-selector">
+          <button onclick="changeQty(-1)">−</button>
+          <span id="modalQty">1</span>
+          <button onclick="changeQty(1)">+</button>
+        </div>
+        <button class="btn-add-cart" onclick="addFromModal()">Adicionar ao Carrinho</button>
+        <button class="btn-buy-now" onclick="buyFromModal()">Comprar Agora</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== TOAST ===== -->
+<div class="toast" id="toast"></div>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="logo-icon">◈</span>
+      <span class="logo-text">ShopDrop</span>
+      <p>Sua loja de confiança com os melhores produtos e entrega rápida.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Links</h4>
+      <a href="#" onclick="showPage('home')">Início</a>
+      <a href="#produtos">Produtos</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
+    </div>
+    <div class="footer-links">
+      <h4>Pagamento</h4>
+      <p>Aceitamos apenas PIX</p>
+      <div class="pix-badge">PIX ✓</div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 ShopDrop. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<!-- ===== ADMIN PANEL (acesso por ?admin=1) ===== -->
+<div id="adminPanel" style="display:none">
+  <div class="admin-wrapper">
+    <h1>⚙️ Painel Administrativo</h1>
+    <p class="admin-sub">Gerencie produtos, configurações e chave PIX da loja</p>
+    <div class="admin-layout">
+      <!-- CONFIG GERAL -->
+      <div class="admin-card">
+        <h3>🏪 Configurações da Loja</h3>
+        <div class="form-group">
+          <label>Nome da Loja</label>
+          <input type="text" id="adminStoreName" value="ShopDrop" />
+        </div>
+        <div class="form-group">
+          <label>Chave PIX (para pagamentos)</label>
+          <input type="text" id="adminPixKey" placeholder="sua@chave.pix ou CPF/CNPJ" />
+        </div>
+        <div class="form-group">
+          <label>E-mail de Suporte</label>
+          <input type="email" id="adminEmail" value="suporte@shopdrop.com.br" />
+        </div>
+        <div class="form-group">
+          <label>WhatsApp</label>
+          <input type="text" id="adminWhatsapp" value="(11) 99999-9999" />
+        </div>
+        <button class="admin-save-btn" onclick="saveConfig()">Salvar Configurações</button>
+      </div>
+
+      <!-- EMAILJS CONFIG -->
+      <div class="admin-card">
+        <h3>📧 Configuração do EmailJS</h3>
+        <div class="emailjs-help">
+          <p>Acesse <a href="https://www.emailjs.com" target="_blank" style="color:var(--accent)">emailjs.com</a>, crie uma conta gratuita e preencha as credenciais abaixo.</p>
+          <div class="emailjs-status" id="ejsStatus"></div>
+        </div>
+        <div class="form-group">
+          <label>Public Key <span class="field-hint">Account → API Keys</span></label>
+          <input type="text" id="adminEjsPublicKey" placeholder="ex: aBcDeFgH1234567890" autocomplete="off" />
+        </div>
+        <div class="form-group">
+          <label>Service ID <span class="field-hint">Email Services</span></label>
+          <input type="text" id="adminEjsServiceId" placeholder="ex: service_xxxxxxx" autocomplete="off" />
+        </div>
+        <div class="form-group">
+          <label>Template — Cliente <span class="field-hint">confirmação ao comprador</span></label>
+          <input type="text" id="adminEjsTemplateCliente" placeholder="ex: template_xxxxxxx" autocomplete="off" />
+        </div>
+        <div class="form-group">
+          <label>Template — Lojista <span class="field-hint">notificação de novo pedido</span></label>
+          <input type="text" id="adminEjsTemplateLojista" placeholder="ex: template_xxxxxxx" autocomplete="off" />
+        </div>
+        <div class="admin-btn-row">
+          <button class="admin-save-btn" onclick="saveConfig()">💾 Salvar Tudo</button>
+          <button class="admin-test-btn" onclick="testEmailJS()">🧪 Testar E-mail</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ADICIONAR PRODUTO (linha inteira, abaixo do grid 2 col) -->
+    <div class="admin-card" style="margin-bottom:1.5rem">
+      <h3>➕ Adicionar Produto</h3>
+      <div class="admin-add-grid">
+        <div class="form-group">
+          <label>Nome do Produto *</label>
+          <input type="text" id="newProdName" placeholder="Nome do produto" />
+        </div>
+        <div class="form-group">
+          <label>Preço de Venda (R$) *</label>
+          <input type="number" id="newProdPrice" placeholder="99.90" step="0.01" min="0" />
+        </div>
+        <div class="form-group">
+          <label>Preço Original (para desconto, opcional)</label>
+          <input type="number" id="newProdOrigPrice" placeholder="149.90" step="0.01" min="0" />
+        </div>
+        <div class="form-group" style="grid-column:1/-1">
+          <label>URL da Imagem *</label>
+          <input type="text" id="newProdImg" placeholder="https://exemplo.com/imagem.jpg" />
+        </div>
+        <div class="form-group" style="grid-column:1/-1">
+          <label>Descrição do Produto</label>
+          <textarea id="newProdDesc" placeholder="Descreva o produto brevemente..." rows="3"></textarea>
+        </div>
+      </div>
+      <button class="admin-save-btn" onclick="addProduct()">➕ Adicionar Produto</button>
+    </div>
+
+    <!-- LISTA DE PRODUTOS -->
+    <div class="admin-products-list">
+      <h3>📋 Produtos Cadastrados (<span id="adminProdCount">0</span>)</h3>
+      <div class="admin-search">
+        <input type="text" placeholder="Buscar produto para editar..." id="adminSearch" oninput="renderAdminList()" />
+      </div>
+      <div id="adminProductList"></div>
+    </div>
+
+    <div style="text-align:center;margin-top:2rem">
+      <button class="btn-ghost" onclick="showPage('home')">← Voltar à Loja</button>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL EDITAR PRODUTO -->
+<div class="modal-overlay" id="editModalOverlay" onclick="closeEditModal()"></div>
+<div class="edit-modal" id="editModal">
+  <h3>✏️ Editar Produto</h3>
+  <input type="hidden" id="editProdId" />
+  <div class="form-group">
+    <label>Nome</label>
+    <input type="text" id="editProdName" />
+  </div>
+  <div class="form-group">
+    <label>Preço (R$)</label>
+    <input type="number" id="editProdPrice" step="0.01" />
+  </div>
+  <div class="form-group">
+    <label>URL da Imagem</label>
+    <input type="text" id="editProdImg" />
+  </div>
+  <div class="form-group">
+    <label>Descrição</label>
+    <textarea id="editProdDesc" rows="3"></textarea>
+  </div>
+  <div class="form-group">
+    <label>Preço Original (opcional)</label>
+    <input type="number" id="editProdOrigPrice" step="0.01" />
+  </div>
+  <div class="edit-modal-btns">
+    <button class="admin-save-btn" onclick="saveEditProduct()">Salvar</button>
+    <button class="btn-ghost" onclick="closeEditModal()">Cancelar</button>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
