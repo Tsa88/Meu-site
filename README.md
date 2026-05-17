@@ -35,16 +35,14 @@ const STORE_CONFIG = {
 
 Localize o array `PRODUCTS` no arquivo `app.js` e adicione blocos como este:
 
-```javascript
 {
-  id: 31,               // ← número único, não repita
-  name: "Nome do Produto",
-  price: 99.90,         // preço de venda
-  origPrice: 149.90,    // preço riscado (opcional)
-  img: "https://link-da-imagem.jpg",
-  desc: "Descrição do produto aqui."
-},
-```
+    id: 31,                               // Identificador único sequencial (não repetir)
+    name: "Título Exibido do Produto",
+    price: 129.90,                        // Valor final de venda
+    origPrice: 199.90,                    // Valor riscado para exibição de desconto (opcional)
+    img: "[https://imagens.com/foto.jpg](https://imagens.com/foto.jpg)",  // Link direto público da imagem
+    desc: "Detalhes descritivos sobre as características e usabilidade do produto."
+}
 
 **Método 2 — Pelo Painel Administrativo** (mais fácil):
 
