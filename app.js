@@ -5,9 +5,9 @@
 // CONFIGURAÇÕES PADRÃO DO SISTEMA
 const STORE_CONFIG = {
     name: "ShopDrop",
-    pixKey: "shopdrop@pagamento.com",
-    email: "suporte@shopdrop.com.br",
-    whatsapp: "5511999999999",
+    pixKey: "tsa.albuquerque@gmail.com",
+    email: "Ouvidoria@coleducatefsa.com.br",
+    whatsapp: "5575992101434",
 };
 
 // CONFIGURAÇÃO INICIAL DO EMAILJS
