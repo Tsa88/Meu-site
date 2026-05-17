@@ -83,6 +83,23 @@ O site usa `mailto:` para abrir o cliente de e-mail com o template preenchido. P
 - **[Formspree](https://formspree.io/)** — simples de configurar
 - Backend Node.js/Python com SendGrid ou Nodemailer
 
+<!-- modify this form HTML and place wherever you want your form -->
+<form
+  action="https://formspree.io/f/mzdwpvdk"
+  method="POST"
+>
+  <label>
+    Your email:
+    <input type="email" name="email">
+  </label>
+  <label>
+    Your message:
+    <textarea name="message"></textarea>
+  </label>
+  <!-- your other form fields go here -->
+  <button type="submit">Send</button>
+</form>
+
 ---
 
 ## 🔧 Personalização Rápida
