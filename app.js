@@ -5,8 +5,8 @@
 // CONFIGURAÇÕES PADRÃO DO SISTEMA - ATUALIZADO COM SEUS DADOS
 const STORE_CONFIG = {
     name: "ShopDrop",
-    pixKey: "tsa.albuquerque@gmail.com", // Coloquei seu e-mail como chave PIX (mude se for outra)
-    email: "tsa.albuquerque@gmail.com",
+    pixKey: "tsa.albuquerque88@gmail.com", // Coloquei seu e-mail como chave PIX (mude se for outra)
+    email: "tsa.albuquerque88@gmail.com",
     whatsapp: "5575992101434", // Formato internacional para funcionar o link
 };
 
@@ -72,7 +72,13 @@ function applyConfigToUI() {
         emailEl.href = `mailto:${STORE_CONFIG.email}`;
     }
     if (whatsEl) {
-        whatsEl.textContent = "(75) 99210-1434";
+        const whatsappDigits = String(STORE_CONFIG.whatsapp || "").replace(/\D/g, "");
+        const localNumber = whatsappDigits.startsWith("55") ? whatsappDigits.slice(2) : whatsappDigits;
+        if (localNumber.length === 11) {
+            whatsEl.textContent = `(${localNumber.slice(0, 2)}) ${localNumber.slice(2, 7)}-${localNumber.slice(7)}`;
+        } else {
+            whatsEl.textContent = STORE_CONFIG.whatsapp;
+        }
     }
 }
 
