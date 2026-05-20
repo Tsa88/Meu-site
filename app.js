@@ -38,9 +38,9 @@ let modalQty = 1;
 // INICIALIZAÇÃO
 document.addEventListener("DOMContentLoaded", () => {
     // Forçar limpeza de cache de configurações antigas no primeiro carregamento
-    if (!localStorage.getItem("config_reset_v1")) {
+    if (!localStorage.getItem("config_reset_v2")) {
         localStorage.removeItem("shopDrop_config");
-        localStorage.setItem("config_reset_v1", "true");
+        localStorage.setItem("config_reset_v2", "true");
     }
 
     loadFromStorage();
