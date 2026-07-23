@@ -4,10 +4,11 @@
 
 // CONFIGURAÇÕES PADRÃO DO SISTEMA - ATUALIZADO COM SEUS DADOS
 const STORE_CONFIG = {
-    name: "ShopDrop",
-    pixKey: "tsa.albuquerque88@gmail.com", // Coloquei seu e-mail como chave PIX (mude se for outra)
-    email: "tsa.albuquerque88@gmail.com",
-    whatsapp: "5575992101434", // Formato internacional para funcionar o link
+  name: "ShopDropAlbuquerque",               // Nome da sua loja
+  pixKey: "tsa.albuquerque@gmail.com",        // ← SUA CHAVE PIX
+  email: "Ouvidoria@coleducatefsa.com.br",   // E-mail de suporte
+  whatsapp: "5575992101434",      // WhatsApp (só números)
+}; internacional para funcionar o link
 };
 
 // CONFIGURAÇÃO INICIAL DO EMAILJS
