@@ -11,12 +11,11 @@ const STORE_CONFIG = {
 };
 
 // CONFIGURAÇÃO INICIAL DO EMAILJS
-const async function testEmailJS() {
-  const btn = document.querySelector(".admin-test-btn");
-  const status = document.getElementById("ejsStatus");
-
-  // Salva antes de testar para garantir que usa os valores dos campos
-  saveConfig();
+const EMAILJS_CONFIG = {
+    publicKey: "SUA_PUBLIC_KEY_AQUI",
+    serviceId: "SEU_SERVICE_ID_AQUI",
+    templateCliente: "SEU_TEMPLATE_CLIENTE_ID",
+    templateLojista: "SEU_TEMPLATE_LOJISTA_ID"
 };
 
 // ARRAY DE PRODUTOS (Exemplo de como adicionar)
