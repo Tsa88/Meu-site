@@ -8,15 +8,15 @@ const STORE_CONFIG = {
   pixKey: "tsa.albuquerque@gmail.com",        // ← SUA CHAVE PIX
   email: "Ouvidoria@coleducatefsa.com.br",   // E-mail de suporte
   whatsapp: "5575992101434",      // WhatsApp (só números)
-}; internacional para funcionar o link
 };
 
 // CONFIGURAÇÃO INICIAL DO EMAILJS
-const EMAILJS_CONFIG = {
-    publicKey: "SUA_PUBLIC_KEY_AQUI",
-    serviceId: "SEU_SERVICE_ID_AQUI",
-    templateCliente: "SEU_TEMPLATE_CLIENTE_ID",
-    templateLojista: "SEU_TEMPLATE_LOJISTA_ID"
+const async function testEmailJS() {
+  const btn = document.querySelector(".admin-test-btn");
+  const status = document.getElementById("ejsStatus");
+
+  // Salva antes de testar para garantir que usa os valores dos campos
+  saveConfig();
 };
 
 // ARRAY DE PRODUTOS (Exemplo de como adicionar)
